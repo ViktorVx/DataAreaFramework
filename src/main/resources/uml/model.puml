@@ -1,0 +1,51 @@
+@startuml
+class Person {
+    String firstName
+    String middleName
+    String lastName
+    Date birthDate
+    Gender gender
+}
+class Employee {
+    Person person
+    Department department
+    Grade grade
+    BigDecimal salary
+    List<WorkDay> workDays
+}
+class Organization {
+    String name
+    List<Department> departments
+}
+class Department {
+    String name
+    Department parent
+}
+class Grade {
+    String name
+    BigDecimal downSalaryLevel
+    BigDecimal upSalaryLevel
+}
+class WorkDay {
+    Person person
+    Date date
+    WorkDayType workDayType
+}
+enum Gender {
+    MALE
+    FEMALE
+}
+enum WorkDayType {
+    ON_DUTY
+    ILLNESS
+    ABSENCE
+}
+Person -> Gender
+Employee -> Person
+Employee -> Department
+Employee -> Grade
+Organization -> Department
+Department -> Department
+WorkDay -> Person
+WorkDay -> WorkDayType
+@enduml
