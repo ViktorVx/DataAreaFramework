@@ -7,6 +7,7 @@ import java.util.List;
 
 @Data
 public class Employee {
+    Long id;
     Person person;
     Department department;
     Grade grade;

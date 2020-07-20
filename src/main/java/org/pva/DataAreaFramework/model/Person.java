@@ -6,6 +6,7 @@ import java.util.Date;
 
 @Data
 public class Person {
+    Long id;
     String firstName;
     String lastName;
     String middleName;

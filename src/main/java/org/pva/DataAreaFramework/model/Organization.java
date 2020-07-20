@@ -6,6 +6,7 @@ import java.util.List;
 
 @Data
 public class Organization {
+    Long id;
     String name;
     List<Department> departments;
 }
