@@ -1,7 +1,11 @@
 databaseChangeLog:
   - include:
       file: db/changelog/sql/person.sql
-  - include:
-      file: db/changelog/sql/department.sql
-  - include:
-      file: db/changelog/sql/grade.sql
+#  - include:
+#      file: db/changelog/sql/department.sql
+#  - include:
+#      file: db/changelog/sql/grade.sql
+#  - include:
+#      file: db/changelog/sql/employee.sql
+#  - include:
+#      file: db/changelog/sql/employee_workdays.sql
