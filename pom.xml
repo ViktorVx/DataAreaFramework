@@ -16,6 +16,7 @@
 
 	<properties>
 		<java.version>11</java.version>
+		<hibernate.validator.version>6.1.5.Final</hibernate.validator.version>
 	</properties>
 
 	<dependencies>
@@ -37,6 +38,11 @@
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
 			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-validator</artifactId>
+			<version>${hibernate.validator.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>com.h2database</groupId>
