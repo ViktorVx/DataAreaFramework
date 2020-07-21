@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 @Table(name = "grade")
 public class Grade {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
     @Column @NotNull
     String name;

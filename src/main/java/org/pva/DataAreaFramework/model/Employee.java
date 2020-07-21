@@ -11,7 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "employee")
 public class Employee {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     Person person;

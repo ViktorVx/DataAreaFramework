@@ -11,7 +11,7 @@ import java.util.Date;
 @Table(name = "person")
 public class Person {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
     @Column @NotNull
     String firstName;

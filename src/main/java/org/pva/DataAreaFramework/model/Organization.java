@@ -10,7 +10,7 @@ import java.util.List;
 @Entity
 @Table(name = "organization")
 public class Organization {
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
     @Column @NotNull
     String name;

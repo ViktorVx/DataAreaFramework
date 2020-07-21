@@ -7,5 +7,7 @@ create table department (
     parent_id bigint,
     foreign key (parent_id) references department(id)
 );
-alter table department add constraint parent_department_fk foreign key (parent_id) references department
+alter table department drop constraint if exists UK_pckwqaicar1mpn27equblhqgh;
+alter table department add constraint UK_pckwqaicar1mpn27equblhqgh unique (parent_id);
+alter table department add constraint parent_department_fk foreign key (parent_id) references department;
 /

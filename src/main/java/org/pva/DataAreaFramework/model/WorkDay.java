@@ -10,7 +10,7 @@ import java.util.Date;
 @Table(name = "work_day")
 public class WorkDay {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     Person person;
