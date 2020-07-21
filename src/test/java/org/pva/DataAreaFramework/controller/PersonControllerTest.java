@@ -31,6 +31,7 @@ class PersonControllerTest {
     public void getPersonsListTest() {
         Person person = new Person();
         person.setFirstName("Ivan");
+        person.setLastName("Ivanov");
         personRepository.save(person);
 
         assertEquals(Collections.singletonList(person), personController.getPersonsList());

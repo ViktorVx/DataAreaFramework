@@ -2,21 +2,20 @@ package org.pva.DataAreaFramework.model;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.util.Date;
 
 @Data
 @Entity
+@Table(name = "person")
 public class Person {
     @Id
     @GeneratedValue
     Long id;
-    @Column
+    @Column @NotNull
     String firstName;
-    @Column
+    @Column @NotNull
     String lastName;
     @Column
     String middleName;
